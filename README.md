@@ -1,5 +1,6 @@
 # EX-NO-6-Pseudo-Random-Number
 
+
 # AIM: 
 Implementation of Pseudorandom Number Generation Using Standard library
 
@@ -12,6 +13,41 @@ End the program.
 
 # PROGRAM:
 
+```
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() 
+{
+    int count, min, max;
+    printf("Enter the number of random numbers to generate: ");
+    scanf("%d", &count);
+    printf("Enter the minimum value: ");
+    
+    scanf("%d", &min);
+    printf("Enter the maximum value: ");
+    scanf("%d", &max);
+    srand(time(NULL));
+    printf("Pseudorandom numbers:\n");   
+    for (int i = 0; i < count; i++) 
+    {
+        int random_number = (rand() % (max - min + 1)) + min;
+        printf("%d\n", random_number);
+    }
+    return 0;
+}
+```
+
+
+
+
 # OUTPUT:
 
+<img width="1917" height="1022" alt="image" src="https://github.com/user-attachments/assets/c4c2fdd5-0bdb-49e1-994c-ebe4051ae2a3" />
+
+
+
 # RESULT:
+The implementation of Pseudorandom Number Generation using Standard library is successful.
